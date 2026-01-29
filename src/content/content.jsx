@@ -146,7 +146,6 @@ const content = {
               </svg>
             </span>
           </span>{' '}
-          em Sobradinho
         </h1>
       ),
       subtitle: (
