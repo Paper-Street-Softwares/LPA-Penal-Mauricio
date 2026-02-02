@@ -203,9 +203,9 @@ const content = {
             'Descubra para onde ele foi levado e entre em contato imediatamente. As primeiras horas são decisivas para a liberdade dele.',
         },
         card3: {
-          title: 'Tem como soltar ele agora?',
+          title: 'Tem como soltar ele agora? ',
           paragraph:
-            'Tem, mas o tempo é decisivo. Fale comigo agora para agir imediatamente.',
+            'Cada caso deve ser analisado, o tempo é primordial. Fale comigo agora para agir imediatamente.',
         },
         card4: {
           title: 'Quanto tempo eu tenho para me defender?',
