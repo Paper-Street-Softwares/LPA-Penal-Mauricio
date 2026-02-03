@@ -1,2 +1,2 @@
 User-agent: *
-Sitemap: https://criminalista.mauriciobatista.adv.br//sitemap.xml
+Sitemap: https://advmauriciocriminalista.com.br/sitemap.xml

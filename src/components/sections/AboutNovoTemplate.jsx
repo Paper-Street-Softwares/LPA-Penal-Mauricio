@@ -1,23 +1,23 @@
-import React, { useState } from 'react'
-import { motion } from 'framer-motion'
-import SectionArea from '../sectionElements/SectionArea'
-import SectionWrapper from '../sectionElements/SectionWrapper'
-import { ArrowRight, CheckCircle2, X } from 'lucide-react'
-import { Dialog } from 'primereact/dialog'
-import content from '../../content/content'
-import ButtonReflexo from '../interactives/ButtonReflexo'
-import { Button } from '../interactives/ButtonNovoTemplate'
-import { Phone } from 'lucide-react'
-import SectionHeaderNovo from '../sectionElements/SectionHeaderNovo'
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import SectionArea from "../sectionElements/SectionArea";
+import SectionWrapper from "../sectionElements/SectionWrapper";
+import { ArrowRight, CheckCircle2, X } from "lucide-react";
+import { Dialog } from "primereact/dialog";
+import content from "../../content/content";
+import ButtonReflexo from "../interactives/ButtonReflexo";
+import { Button } from "../interactives/ButtonNovoTemplate";
+import { Phone } from "lucide-react";
+import SectionHeaderNovo from "../sectionElements/SectionHeaderNovo";
 
 function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
-  const [visible, setVisible] = useState(false)
-  const [modalTitle, setModalTitle] = useState('')
+  const [visible, setVisible] = useState(false);
+  const [modalTitle, setModalTitle] = useState("");
 
   const onClick = () => {
-    setModalTitle(content.texts.about.title)
-    setVisible(true)
-  }
+    setModalTitle(content.texts.about.title);
+    setVisible(true);
+  };
 
   // Definindo classes conforme colorMode
   let backgroundMode,
@@ -27,38 +27,38 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
     iconBg,
     buttonBg,
     textDestaque,
-    image
+    image;
 
   switch (colorMode) {
-    case 'light':
-      backgroundMode = 'bg-white'
-      text = 'text-corTitulosPreto'
-      textOpacity = 'text-corOutrosTextosPreto'
-      textDestaque = 'text-primaryDark'
-      cardBg = 'bg-white/10'
-      iconBg = 'bg-primaryDark/10 text-primaryDark'
-      buttonBg = 'bg-primaryDark'
-      image = ' border-[8px] border-white'
-      break
-    case 'dark':
-      backgroundMode = 'bg-black'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      textDestaque = 'text-primaryLight'
-      cardBg = 'bg-gray-800/20'
-      iconBg = 'bg-primaryLight/20 text-primaryLight'
-      buttonBg = 'bg-primaryLight'
-      image = ' border-[8px] border-borderImage'
-      break
+    case "light":
+      backgroundMode = "bg-white";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      textDestaque = "text-primaryDark";
+      cardBg = "bg-white/10";
+      iconBg = "bg-primaryDark/10 text-primaryDark";
+      buttonBg = "bg-primaryDark";
+      image = " border-[8px] border-white";
+      break;
+    case "dark":
+      backgroundMode = "bg-black";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      textDestaque = "text-primaryLight";
+      cardBg = "bg-gray-800/20";
+      iconBg = "bg-primaryLight/20 text-primaryLight";
+      buttonBg = "bg-primaryLight";
+      image = " border-[8px] border-borderImage";
+      break;
     default:
-      backgroundMode = 'bg-white'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      textDestaque = 'text-primaryDark'
-      cardBg = 'bg-white/10'
-      iconBg = 'bg-primaryDark/10 text-primaryDark'
-      buttonBg = 'bg-primaryDark'
-      image = ' border-[8px] border-white'
+      backgroundMode = "bg-white";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      textDestaque = "text-primaryDark";
+      cardBg = "bg-white/10";
+      iconBg = "bg-primaryDark/10 text-primaryDark";
+      buttonBg = "bg-primaryDark";
+      image = " border-[8px] border-white";
   }
 
   return (
@@ -68,14 +68,14 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
       className={`${backgroundMode}`}
     >
       <SectionWrapper>
-        <section className="w-full relative overflow-visible">
-          <div className="container mx-auto relative z-10">
-            <div className="grid lg:grid-cols-2 gap-4 desktop1:gap-16 items-center">
+        <section className="relative w-full overflow-visible">
+          <div className="container relative z-10 mx-auto">
+            <div className="grid items-center gap-4 lg:grid-cols-2 desktop1:gap-16">
               {/* Conteúdo textual */}
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut' }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
                 className="space-y-8"
               >
                 <div>
@@ -108,12 +108,12 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
                   <div className="space-y-4">
                     {[
                       {
-                        title: 'Defesa estratégica desde a primeira hora',
-                        desc: 'Atuação imediata para proteger sua liberdade em cada decisão do caso.',
+                        title: "Defesa estratégica desde a primeira hora",
+                        desc: "Atuação imediata para proteger sua liberdade em cada decisão do caso.",
                       },
                       {
-                        title: 'Transparência Real ',
-                        desc: 'Você sabe exatamente o que pode acontecer, os riscos envolvidos e os próximos passos.',
+                        title: "Transparência Real ",
+                        desc: "Você sabe exatamente o que pode acontecer, os riscos envolvidos e os próximos passos.",
                       },
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-start gap-4">
@@ -135,7 +135,7 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
                   </div>
                 )}
 
-                <div className="desktop1:flex flex-col gap-4 pt-4 w-fit justify-center items-start m-auto desktop1:m-0 hidden">
+                <div className="flex-col items-start justify-center hidden gap-4 pt-4 m-auto desktop1:flex w-fit desktop1:m-0">
                   <ButtonReflexo
                     icon={
                       <svg
@@ -152,14 +152,14 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
                     label={content.texts.about.ctaButtonText}
                     colorMode={colorMode}
                   />
-                  <ButtonReflexo
+                  {/* <ButtonReflexo
                     id="ligar"
                     icon={<Phone width={20} />}
                     link={`tel:${content.texts.infos.phone}`}
                     label="Emergência? Ligue agora!"
                     colorMode={colorMode}
-                    className="text-white mx-auto desktop1:m-0"
-                  />
+                    className="mx-auto text-white desktop1:m-0"
+                  /> */}
                 </div>
               </motion.div>
 
@@ -167,10 +167,10 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
-                className="relative w-full mt-4 tablet1:mt-8 desktop1:mt-10 m-auto overflow-visible mb-10"
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                className="relative w-full m-auto mt-4 mb-10 overflow-visible tablet1:mt-8 desktop1:mt-10"
               >
-                <div className="relative rounded-3xl shadow-2xl ring-1 ring-black/5">
+                <div className="relative shadow-2xl rounded-3xl ring-1 ring-black/5">
                   {/* CLIP DA IMAGEM */}
                   <div
                     className={`relative rounded-3xl overflow-hidden  ${image}`}
@@ -186,7 +186,7 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
                 </div>
               </motion.div>
 
-              <div className="flex flex-col gap-4 w-fit justify-center items-center mx-auto desktop1:hidden">
+              <div className="flex flex-col items-center justify-center gap-4 mx-auto w-fit desktop1:hidden">
                 <ButtonReflexo
                   icon={
                     <svg
@@ -203,37 +203,37 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
                   label={content.texts.about.ctaButtonText}
                   colorMode={colorMode}
                 />
-                <ButtonReflexo
+                {/* <ButtonReflexo
                   id="ligar"
                   icon={<Phone width={20} />}
                   link={`tel:${content.texts.infos.phone}`}
                   label="Emergência? Ligue agora!"
                   colorMode={colorMode}
                   className="text-white"
-                />
+                /> */}
               </div>
             </div>
           </div>
 
           {/* Modal */}
           <Dialog
-            className="font-secondFont bg-white p-4 rounded-md"
+            className="p-4 bg-white rounded-md font-secondFont"
             closeIcon={<X size={20} />}
             header={
-              <span className="font-secondFont px-4">
+              <span className="px-4 font-secondFont">
                 {content.texts.about.titleModal}
               </span>
             }
             visible={visible}
             onHide={() => setVisible(false)}
-            style={{ width: '50vw' }}
+            style={{ width: "50vw" }}
             breakpoints={{
-              '4000px': '641px',
-              '1024px': '641px',
-              '641px': '85vw',
+              "4000px": "641px",
+              "1024px": "641px",
+              "641px": "85vw",
             }}
           >
-            <div className="text-paragraph3 px-4 pb-4">
+            <div className="px-4 pb-4 text-paragraph3">
               <p className={`mt-[15px] mb-[20px] ${textOpacity}`}>
                 {content.texts.about.modal}
               </p>
@@ -258,7 +258,7 @@ function AboutNovoTemplate({ ButtonModal, colorMode, benefits }) {
         </section>
       </SectionWrapper>
     </SectionArea>
-  )
+  );
 }
 
-export default AboutNovoTemplate
+export default AboutNovoTemplate;

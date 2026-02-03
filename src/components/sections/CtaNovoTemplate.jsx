@@ -1,38 +1,38 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import SectionArea from '../sectionElements/SectionArea'
-import SectionWrapper from '../sectionElements/SectionWrapper'
-import ButtonReflexo from '../interactives/ButtonReflexo'
-import content from '../../content/content'
-import { whatsAppThemes } from '../../context/UseContextArchive'
-import { Phone } from 'lucide-react'
-import WhatsappForm from '../interactives/WhatsappForm'
-import FormAndAdress from '../interactives/Forms/FormAndAdress'
+import React from "react";
+import { motion } from "framer-motion";
+import SectionArea from "../sectionElements/SectionArea";
+import SectionWrapper from "../sectionElements/SectionWrapper";
+import ButtonReflexo from "../interactives/ButtonReflexo";
+import content from "../../content/content";
+import { whatsAppThemes } from "../../context/UseContextArchive";
+import { Phone } from "lucide-react";
+import WhatsappForm from "../interactives/WhatsappForm";
+import FormAndAdress from "../interactives/Forms/FormAndAdress";
 
 function CtaNovoTemplate({ colorMode }) {
   // Classes dinâmicas conforme colorMode
-  let text, textOpacity, backgroundMode, miniTagCtaDark
+  let text, textOpacity, backgroundMode, miniTagCtaDark;
 
   switch (colorMode) {
-    case 'light':
-      text = 'text-corTitulosPreto'
-      textOpacity = 'text-corOutrosTextosPreto'
-      backgroundMode = 'bg-terciary/60'
-      miniTagCtaDark = 'text-primaryDark'
-      break
-    case 'dark':
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corTitulosBranca/60'
-      backgroundMode = 'bg-darkOpacity'
-      miniTagCtaDark = 'text-primaryLight'
-      break
+    case "light":
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      backgroundMode = "bg-terciary/60";
+      miniTagCtaDark = "text-primaryDark";
+      break;
+    case "dark":
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corTitulosBranca/60";
+      backgroundMode = "bg-darkOpacity";
+      miniTagCtaDark = "text-primaryLight";
+      break;
     default:
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      backgroundMode = 'bg-primaryDark'
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      backgroundMode = "bg-primaryDark";
   }
 
-  const lisContainer = Object.values(content.texts.ctaSecondary.container)
+  const lisContainer = Object.values(content.texts.ctaSecondary.container);
 
   return (
     <SectionArea className={`relative z-0 ${backgroundMode}`}>
@@ -42,7 +42,7 @@ function CtaNovoTemplate({ colorMode }) {
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: 'easeOut' }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
             className="container mx-auto"
           >
             <span
@@ -67,7 +67,7 @@ function CtaNovoTemplate({ colorMode }) {
               {lisContainer.map((item, index) => (
                 <div
                   key={index}
-                  className="font-secondFont flex gap-2 items-start w-full justify-start tablet1:justify-center text-start desktop1:text-start"
+                  className="flex items-start justify-start w-full gap-2 font-secondFont tablet1:justify-center text-start desktop1:text-start"
                 >
                   <span className="text-primaryLight">{item.icon}</span>
                   <p className="text-white">{item.text}</p>
@@ -78,7 +78,7 @@ function CtaNovoTemplate({ colorMode }) {
             {/* <div>
               <FormAndAdress />
             </div> */}
-            <div className="flex flex-col gap-4 pt-4 w-fit justify-center items-center mx-auto">
+            <div className="flex flex-col items-center justify-center gap-4 pt-4 mx-auto w-fit">
               <ButtonReflexo
                 icon={
                   <svg
@@ -95,20 +95,20 @@ function CtaNovoTemplate({ colorMode }) {
                 label={content.texts.ctaSecondary.ctaButtonText}
                 colorMode={colorMode}
               />
-              <ButtonReflexo
+              {/* <ButtonReflexo
                 id="ligar"
                 icon={<Phone width={20} />}
                 link={`tel:${content.texts.infos.phone}`}
                 label="Emergência? Ligue agora!"
                 colorMode={colorMode}
                 className="text-white"
-              />
+              /> */}
             </div>
           </motion.div>
         </section>
       </SectionWrapper>
     </SectionArea>
-  )
+  );
 }
 
-export default CtaNovoTemplate
+export default CtaNovoTemplate;

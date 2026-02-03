@@ -1,34 +1,34 @@
-import React from 'react'
-import { motion } from 'framer-motion'
-import content from '../../content/content'
-import SectionArea from '../sectionElements/SectionArea'
-import SectionWrapper from '../sectionElements/SectionWrapper'
-import ButtonReflexo from '../interactives/ButtonReflexo'
-import { Phone } from 'lucide-react'
+import React from "react";
+import { motion } from "framer-motion";
+import content from "../../content/content";
+import SectionArea from "../sectionElements/SectionArea";
+import SectionWrapper from "../sectionElements/SectionWrapper";
+import ButtonReflexo from "../interactives/ButtonReflexo";
+import { Phone } from "lucide-react";
 
 function FeaturesSemImage({ colorMode }) {
-  let backgroundMode, text, textOpacity, textDestaque
+  let backgroundMode, text, textOpacity, textDestaque;
 
   switch (colorMode) {
-    case 'light':
-      backgroundMode = 'bg-secondary/60'
-      text = 'text-corTitulosPreto'
-      textOpacity = 'text-corOutrosTextosPreto'
-      textDestaque = 'text-primaryLight'
+    case "light":
+      backgroundMode = "bg-secondary/60";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      textDestaque = "text-primaryLight";
 
-      break
-    case 'dark':
-      backgroundMode = 'bg-darkOpacity'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      textDestaque = 'text-primaryLight'
+      break;
+    case "dark":
+      backgroundMode = "bg-darkOpacity";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      textDestaque = "text-primaryLight";
 
-      break
+      break;
     default:
-      backgroundMode = 'bg-secondary'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      textDestaque = 'text-primaryDark'
+      backgroundMode = "bg-secondary";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      textDestaque = "text-primaryDark";
   }
   return (
     <SectionArea id="feature" className={`${backgroundMode}`}>
@@ -38,11 +38,11 @@ function FeaturesSemImage({ colorMode }) {
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, ease: 'easeOut' }}
+              transition={{ duration: 0.8, ease: "easeOut" }}
               className="space-y-10"
             >
               {/* TÍTULO */}
-              <div className="text-center max-w-3xl mx-auto">
+              <div className="max-w-3xl mx-auto text-center">
                 <span
                   className={`${textDestaque} font-bold font-secondFont tracking-wider uppercase text-xs block mb-2`}
                 >
@@ -52,10 +52,10 @@ function FeaturesSemImage({ colorMode }) {
                 <h2
                   className={`text-3xl md:text-4xl font-mainFont font-medium mb-4 flex flex-wrap phone2:gap-3 justify-center ${text}`}
                 >
-                  {content.texts.features.FirstPartTitle}{' '}
+                  {content.texts.features.FirstPartTitle}{" "}
                   <span className={textDestaque}>
                     {content.texts.features.DestaquePartTitle}
-                  </span>{' '}
+                  </span>{" "}
                   {content.texts.features.SecondPartTitle}
                 </h2>
 
@@ -65,35 +65,35 @@ function FeaturesSemImage({ colorMode }) {
               </div>
 
               {/* LISTAS */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mt-12">
+              <div className="grid grid-cols-1 gap-12 mt-12 md:grid-cols-2">
                 {/* CARD ESQUERDO */}
-                <div className="bg-black/40 h-fit backdrop-blur-md rounded-2xl p-10 shadow-2xl">
-                  <ul className="space-y-3 text-neutral-200 text-sm md:text-base font-secondFont">
+                <div className="p-10 shadow-2xl bg-black/40 h-fit backdrop-blur-md rounded-2xl">
+                  <ul className="space-y-3 text-sm text-neutral-200 md:text-base font-secondFont">
                     {[
-                      'Atendimento criminal 24 horas, online e presencial',
-                      'Prisão em flagrante',
-                      'Lavratura e acompanhamento de flagrante',
-                      'Acompanhamento em delegacias de polícia',
-                      'Diligências urgentes em órgãos policiais',
-                      'Depoimentos em delegacias',
-                      'Audiência de custódia',
-                      'Atuação em inquérito policial',
-                      'Defesa em ação penal',
-                      'Audiência de instrução e julgamento',
-                      'Sustentação oral',
-                      'Elaboração de recursos criminais',
-                      'Apelação criminal',
-                      'Acompanhamento processual até o trânsito em julgado',
-                      'Habeas corpus',
-                      'Pedido de liberdade provisória',
-                      'Relaxamento de prisão',
-                      'Revogação de prisão',
-                      'Atuação no Tribunal do Júri',
-                      'Defesa em crimes dolosos contra a vida',
-                      'Execução penal',
-                      'Progressão de regime',
-                      'Livramento condicional',
-                      'Indulto',
+                      "Atendimento criminal 24 horas, online e presencial",
+                      "Prisão em flagrante",
+                      "Lavratura e acompanhamento de flagrante",
+                      "Acompanhamento em delegacias de polícia",
+                      "Diligências urgentes em órgãos policiais",
+                      "Depoimentos em delegacias",
+                      "Audiência de custódia",
+                      "Atuação em inquérito policial",
+                      "Defesa em ação penal",
+                      "Audiência de instrução e julgamento",
+                      "Sustentação oral",
+                      "Elaboração de recursos criminais",
+                      "Apelação criminal",
+                      "Acompanhamento processual até o trânsito em julgado",
+                      "Habeas corpus",
+                      "Pedido de liberdade provisória",
+                      "Relaxamento de prisão",
+                      "Revogação de prisão",
+                      "Atuação no Tribunal do Júri",
+                      "Defesa em crimes dolosos contra a vida",
+                      "Execução penal",
+                      "Progressão de regime",
+                      "Livramento condicional",
+                      "Indulto",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-3">
                         <span className="text-primaryLight">✔</span>
@@ -104,33 +104,33 @@ function FeaturesSemImage({ colorMode }) {
                 </div>
 
                 {/* CARD DIREITO */}
-                <div className="bg-black/40 backdrop-blur-md rounded-2xl p-10 shadow-2xl">
-                  <ul className="space-y-3 text-neutral-200 text-sm md:text-base font-secondFont">
+                <div className="p-10 shadow-2xl bg-black/40 backdrop-blur-md rounded-2xl">
+                  <ul className="space-y-3 text-sm text-neutral-200 md:text-base font-secondFont">
                     {[
-                      'Agravo em execução',
-                      'Revisão criminal',
-                      'Crimes de trânsito (Lei Seca, homicídio culposo e lesão corporal)',
-                      'Liberação de veículos apreendidos',
-                      'Crimes contra a ordem econômica',
-                      'Crimes contra a ordem tributária',
-                      'Crimes contra o sistema financeiro nacional',
-                      'Crimes contra o sistema previdenciário',
-                      'Crimes contra as finanças públicas',
-                      'Crimes falimentares',
-                      'Crimes de colarinho branco',
-                      'Lavagem de capitais',
-                      'Tráfico de drogas',
-                      'Organização criminosa',
-                      'Porte e posse ilegal de armas',
-                      'Crimes de furto',
-                      'Crimes de roubo',
-                      'Contrabando e descaminho',
-                      'Crimes ambientais',
-                      'Violência doméstica (Lei Maria da Penha)',
-                      'Juizado Especial Criminal',
-                      'Vara da Infância e Juventude',
-                      'Atuação no STJ',
-                      'Atuação no STF',
+                      "Agravo em execução",
+                      "Revisão criminal",
+                      "Crimes de trânsito (Lei Seca, homicídio culposo e lesão corporal)",
+                      "Liberação de veículos apreendidos",
+                      "Crimes contra a ordem econômica",
+                      "Crimes contra a ordem tributária",
+                      "Crimes contra o sistema financeiro nacional",
+                      "Crimes contra o sistema previdenciário",
+                      "Crimes contra as finanças públicas",
+                      "Crimes falimentares",
+                      "Crimes de colarinho branco",
+                      "Lavagem de capitais",
+                      "Tráfico de drogas",
+                      "Organização criminosa",
+                      "Porte e posse ilegal de armas",
+                      "Crimes de furto",
+                      "Crimes de roubo",
+                      "Contrabando e descaminho",
+                      "Crimes ambientais",
+                      "Violência doméstica (Lei Maria da Penha)",
+                      "Juizado Especial Criminal",
+                      "Vara da Infância e Juventude",
+                      "Atuação no STJ",
+                      "Atuação no STF",
                     ].map((item, index) => (
                       <li key={index} className="flex items-start gap-3">
                         <span className="text-primaryLight">✔</span>
@@ -141,7 +141,7 @@ function FeaturesSemImage({ colorMode }) {
                 </div>
               </div>
 
-              <div className="flex flex-col gap-4 pt-4 w-fit justify-center items-center m-auto">
+              <div className="flex flex-col items-center justify-center gap-4 pt-4 m-auto w-fit">
                 <ButtonReflexo
                   icon={
                     <svg
@@ -158,21 +158,21 @@ function FeaturesSemImage({ colorMode }) {
                   label={content.texts.hero.ctaButtonText}
                   colorMode={colorMode}
                 />
-                <ButtonReflexo
+                {/* <ButtonReflexo
                   id="ligar"
                   icon={<Phone width={20} />}
                   link={`tel:${content.texts.infos.phone}`}
                   label="Emergência? Ligue agora!"
                   colorMode={colorMode}
                   className="text-white"
-                />
+                /> */}
               </div>
             </motion.div>
           </div>
         </section>
       </SectionWrapper>
     </SectionArea>
-  )
+  );
 }
 
-export default FeaturesSemImage
+export default FeaturesSemImage;

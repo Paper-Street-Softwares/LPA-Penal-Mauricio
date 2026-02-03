@@ -1,66 +1,66 @@
-import React from 'react'
-import SectionArea from '../sectionElements/SectionArea'
-import SectionWrapper from '../sectionElements/SectionWrapper'
-import { Siren, Users, ShieldCheck, Clock, Phone } from 'lucide-react'
-import SectionHeaderNovo from '../sectionElements/SectionHeaderNovo'
-import ButtonReflexo from '../interactives/ButtonReflexo'
-import content from '../../content/content'
+import React from "react";
+import SectionArea from "../sectionElements/SectionArea";
+import SectionWrapper from "../sectionElements/SectionWrapper";
+import { Siren, Users, ShieldCheck, Clock, Phone } from "lucide-react";
+import SectionHeaderNovo from "../sectionElements/SectionHeaderNovo";
+import ButtonReflexo from "../interactives/ButtonReflexo";
+import content from "../../content/content";
 
 function Speed({ colorMode }) {
-  let backgroundMode, text, textOpacity, textDestaque, cardBg, iconBg
+  let backgroundMode, text, textOpacity, textDestaque, cardBg, iconBg;
   switch (colorMode) {
-    case 'light':
-      backgroundMode = 'bg-terciary/60'
-      text = 'text-corTitulosPreto'
-      textOpacity = 'text-corOutrosTextosPreto'
-      iconBg = 'bg-white text-primaryDark'
+    case "light":
+      backgroundMode = "bg-terciary/60";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      iconBg = "bg-white text-primaryDark";
 
-      break
-    case 'dark':
-      backgroundMode = 'bg-darkOpacity'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      iconBg = 'bg-darkOpacity text-primaryLight'
+      break;
+    case "dark":
+      backgroundMode = "bg-darkOpacity";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      iconBg = "bg-darkOpacity text-primaryLight";
 
-      break
+      break;
     default:
-      backgroundMode = 'bg-secondary/60'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      iconBg = 'bg-white text-primaryDark'
+      backgroundMode = "bg-secondary/60";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      iconBg = "bg-white text-primaryDark";
   }
   return (
     <SectionArea className={`${backgroundMode}`}>
       <SectionWrapper>
         <section className="">
           <SectionHeaderNovo title="" colorMode={colorMode} />
-          <div className="max-w-4xl mx-auto bg-black rounded-3xl p-8 md:p-12 border border-white/0">
-            <div className="grid sm:grid-cols-2 gap-8">
+          <div className="max-w-4xl p-8 mx-auto bg-black border rounded-3xl md:p-12 border-white/0">
+            <div className="grid gap-8 sm:grid-cols-2">
               {[
                 {
-                  text: 'A_Definir',
-                  subtitle: 'A_Definir',
+                  text: "A_Definir",
+                  subtitle: "A_Definir",
                   icon: Siren,
                 },
                 {
-                  text: 'A_Definir',
-                  subtitle: 'A_Definir',
+                  text: "A_Definir",
+                  subtitle: "A_Definir",
                   icon: Users,
                 },
                 {
-                  text: 'A_Definir',
-                  subtitle: 'A_Definir',
+                  text: "A_Definir",
+                  subtitle: "A_Definir",
                   icon: ShieldCheck,
                 },
                 {
-                  text: 'A_Definir',
-                  subtitle: 'A_Definir',
+                  text: "A_Definir",
+                  subtitle: "A_Definir",
                   icon: Clock,
                 },
               ].map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex flex-col items-center text-center space-y-4"
+                  className="flex flex-col items-center space-y-4 text-center"
                 >
                   <div
                     className={`w-12 h-12 rounded-full  shadow-lg flex items-center justify-center ${iconBg}`}
@@ -86,7 +86,7 @@ function Speed({ colorMode }) {
               </p>
             </div>
 
-            <div className="flex flex-col gap-4 w-fit mt-6 mx-auto justify-center items-start">
+            <div className="flex flex-col items-start justify-center gap-4 mx-auto mt-6 w-fit">
               <ButtonReflexo
                 icon={
                   <svg
@@ -104,20 +104,20 @@ function Speed({ colorMode }) {
                 colorMode={colorMode}
                 className=""
               />
-              <ButtonReflexo
+              {/* <ButtonReflexo
                 id="ligar"
                 icon={<Phone width={20} />}
                 link={`tel:${content.texts.infos.phone}`}
                 label="Emergência? Ligue agora!"
                 colorMode={colorMode}
-                className="text-white mx-auto"
-              />
+                className="mx-auto text-white"
+              /> */}
             </div>
           </div>
         </section>
       </SectionWrapper>
     </SectionArea>
-  )
+  );
 }
 
-export default Speed
+export default Speed;

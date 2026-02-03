@@ -1,36 +1,36 @@
-import React from 'react'
-import SectionArea from '../sectionElements/SectionArea'
-import SectionWrapper from '../sectionElements/SectionWrapper'
-import SectionHeaderNovo from '../sectionElements/SectionHeaderNovo'
-import CardsImportants from '../cards/CardsImportants'
-import content from '../../content/content'
-import ButtonReflexo from '../../components/interactives/ButtonReflexo'
-import { Phone } from 'lucide-react'
+import React from "react";
+import SectionArea from "../sectionElements/SectionArea";
+import SectionWrapper from "../sectionElements/SectionWrapper";
+import SectionHeaderNovo from "../sectionElements/SectionHeaderNovo";
+import CardsImportants from "../cards/CardsImportants";
+import content from "../../content/content";
+import ButtonReflexo from "../../components/interactives/ButtonReflexo";
+import { Phone } from "lucide-react";
 
 function Important({ colorMode }) {
-  const listCards = Object.values(content.texts.important.cards)
+  const listCards = Object.values(content.texts.important.cards);
 
-  let backgroundMode, text, textOpacity, textDestaque, cardBg, iconBg
+  let backgroundMode, text, textOpacity, textDestaque, cardBg, iconBg;
   switch (colorMode) {
-    case 'light':
-      backgroundMode = 'bg-terciary/60'
-      text = 'text-corTitulosPreto'
-      textOpacity = 'text-corOutrosTextosPreto'
-      iconBg = 'bg-white text-primaryDark'
+    case "light":
+      backgroundMode = "bg-terciary/60";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      iconBg = "bg-white text-primaryDark";
 
-      break
-    case 'dark':
-      backgroundMode = 'bg-darkOpacity'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      iconBg = 'bg-darkOpacity text-primaryLight'
+      break;
+    case "dark":
+      backgroundMode = "bg-darkOpacity";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      iconBg = "bg-darkOpacity text-primaryLight";
 
-      break
+      break;
     default:
-      backgroundMode = 'bg-secondary/60'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      iconBg = 'bg-white text-primaryDark'
+      backgroundMode = "bg-secondary/60";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      iconBg = "bg-white text-primaryDark";
   }
 
   return (
@@ -52,7 +52,7 @@ function Important({ colorMode }) {
           {content.texts.important.fraseObs}
         </p>
 
-        <div className="flex flex-col gap-4 w-fit mt-6 mx-auto justify-center items-start">
+        <div className="flex flex-col items-start justify-center gap-4 mx-auto mt-6 w-fit">
           <ButtonReflexo
             icon={
               <svg
@@ -70,18 +70,18 @@ function Important({ colorMode }) {
             colorMode={colorMode}
             className=""
           />
-          <ButtonReflexo
+          {/* <ButtonReflexo
             id="ligar"
             icon={<Phone width={20} />}
             link={`tel:${content.texts.infos.phone}`}
             label="Emergência? Ligue agora!"
             colorMode={colorMode}
-            className="text-white mx-auto"
-          />
+            className="mx-auto text-white"
+          /> */}
         </div>
       </SectionWrapper>
     </SectionArea>
-  )
+  );
 }
 
-export default Important
+export default Important;

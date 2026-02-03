@@ -1,20 +1,20 @@
-import React, { useRef, useState } from 'react'
-import { motion } from 'framer-motion'
-import content from '../../content/content'
-import SectionArea from '../sectionElements/SectionArea'
-import SectionWrapper from '../sectionElements/SectionWrapper'
-import ButtonReflexo from '../interactives/ButtonReflexo'
-import { ArrowLeft, ArrowRight, Phone, Scale } from 'lucide-react'
-import SectionHeaderNovo from '../sectionElements/SectionHeaderNovo'
-import { Button } from 'primereact/button'
+import React, { useRef, useState } from "react";
+import { motion } from "framer-motion";
+import content from "../../content/content";
+import SectionArea from "../sectionElements/SectionArea";
+import SectionWrapper from "../sectionElements/SectionWrapper";
+import ButtonReflexo from "../interactives/ButtonReflexo";
+import { ArrowLeft, ArrowRight, Phone, Scale } from "lucide-react";
+import SectionHeaderNovo from "../sectionElements/SectionHeaderNovo";
+import { Button } from "primereact/button";
 
-import Accordion from '@mui/material/Accordion'
-import AccordionSummary from '@mui/material/AccordionSummary'
-import AccordionDetails from '@mui/material/AccordionDetails'
-import Typography from '@mui/material/Typography'
-import ExpandMoreIcon from '@mui/icons-material/ExpandMore'
+import Accordion from "@mui/material/Accordion";
+import AccordionSummary from "@mui/material/AccordionSummary";
+import AccordionDetails from "@mui/material/AccordionDetails";
+import Typography from "@mui/material/Typography";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-const features = Object.values(content.texts.features.cards)
+const features = Object.values(content.texts.features.cards);
 
 function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
   // Definindo classes dinamicamente conforme o colorMode
@@ -29,56 +29,56 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
     textDestaque,
     textObservation,
     hoverTextCard,
-    bgAccordion
+    bgAccordion;
 
   switch (colorMode) {
-    case 'light':
-      backgroundMode = 'bg-white'
-      bgAccordion = '#fff'
-      text = 'text-corTitulosPreto'
-      textOpacity = 'text-corOutrosTextosPreto'
-      textDestaque = 'text-primaryDark'
-      cardBg = 'bg-quartenary'
-      iconBg = 'bg-white text-primaryDark'
-      image = ' border-[8px] border-white'
-      hoverCardBg = 'hover:bg-primaryDark hover:text-white'
-      hoverTextCard = ' group-hover:text-white'
-      bgObservation = 'bg-primaryDark'
-      textObservation = 'text-white'
-      break
-    case 'dark':
-      backgroundMode = 'bg-black'
-      bgAccordion = 'rgba(0,0,0,0.8)'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      textDestaque = 'text-primaryLight'
-      cardBg = 'bg-dark'
-      iconBg = 'bg-darkOpacity text-primaryLight'
-      image = ' border-[8px] border-borderImage'
-      hoverCardBg = 'hover:bg-primaryLight hover:text-black'
-      hoverTextCard = ' group-hover:text-black'
-      bgObservation = 'bg-primaryLight'
-      textObservation = 'text-black'
+    case "light":
+      backgroundMode = "bg-white";
+      bgAccordion = "#fff";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      textDestaque = "text-primaryDark";
+      cardBg = "bg-quartenary";
+      iconBg = "bg-white text-primaryDark";
+      image = " border-[8px] border-white";
+      hoverCardBg = "hover:bg-primaryDark hover:text-white";
+      hoverTextCard = " group-hover:text-white";
+      bgObservation = "bg-primaryDark";
+      textObservation = "text-white";
+      break;
+    case "dark":
+      backgroundMode = "bg-black";
+      bgAccordion = "rgba(0,0,0,0.8)";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      textDestaque = "text-primaryLight";
+      cardBg = "bg-dark";
+      iconBg = "bg-darkOpacity text-primaryLight";
+      image = " border-[8px] border-borderImage";
+      hoverCardBg = "hover:bg-primaryLight hover:text-black";
+      hoverTextCard = " group-hover:text-black";
+      bgObservation = "bg-primaryLight";
+      textObservation = "text-black";
 
-      break
+      break;
     default:
-      backgroundMode = 'bg-secondary/60'
-      bgAccordion = '#fff'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      textDestaque = 'text-primaryDark'
-      cardBg = 'bg-quartenary'
-      iconBg = 'bg-white text-primaryDark'
-      image = ' border-[8px] border-white'
-      hoverCardBg = 'hover:bg-primaryDark hover:text-white'
-      hoverTextCard = ' group-hover:text-white'
-      bgObservation = 'bg-primaryDark'
-      textObservation = 'text-white'
+      backgroundMode = "bg-secondary/60";
+      bgAccordion = "#fff";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      textDestaque = "text-primaryDark";
+      cardBg = "bg-quartenary";
+      iconBg = "bg-white text-primaryDark";
+      image = " border-[8px] border-white";
+      hoverCardBg = "hover:bg-primaryDark hover:text-white";
+      hoverTextCard = " group-hover:text-white";
+      bgObservation = "bg-primaryDark";
+      textObservation = "text-white";
   }
 
-  const features = Object.values(content.texts.features.cards)
+  const features = Object.values(content.texts.features.cards);
 
-  const [expanded, setExpanded] = useState(0)
+  const [expanded, setExpanded] = useState(0);
 
   return (
     <SectionArea
@@ -89,15 +89,15 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
       <SectionWrapper>
         <section className="relative font-mainFont">
           <div className="container mx-auto">
-            <div className="flex flex-col-reverse desktop1:flex-row gap-16 items-center">
+            <div className="flex flex-col-reverse items-center gap-16 desktop1:flex-row">
               {/* Imagem com destaque */}
               <div>
-                {' '}
+                {" "}
                 <motion.div
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
-                  transition={{ duration: 0.8, ease: 'easeOut' }}
-                  className="relative order-2 lg:order-1 w-full m-auto"
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                  className="relative order-2 w-full m-auto lg:order-1"
                 >
                   <div
                     className={`relative overflow-hidden rounded-3xl shadow-2xl aspect-[4/5]  ${image}`}
@@ -105,7 +105,7 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
                     <img
                       src={content.texts.features.imgFeatures}
                       alt={content.texts.features.alt}
-                      className="w-full h-full object-cover scale-105 hover:scale-100 rounded-2xl transition-transform duration-700"
+                      className="object-cover w-full h-full transition-transform duration-700 scale-105 hover:scale-100 rounded-2xl"
                       width={798}
                       height={798}
                     />
@@ -114,16 +114,16 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
                     <div
                       className={`absolute -bottom-6 -left-6 ${bgObservation} ${textObservation} p-8 rounded-tr-3xl rounded-bl-3xl shadow-xl max-w-xs`}
                     >
-                      <p className="font-secondFont text-2xl font-bold mb-2">
+                      <p className="mb-2 text-2xl font-bold font-secondFont">
                         {content.texts.features.titleMessageFeature}
                       </p>
-                      <p className="text-sm font-secondFont font-light">
+                      <p className="text-sm font-light font-secondFont">
                         {content.texts.features.subtitleMessageFeature}
                       </p>
                     </div>
                   )}
                 </motion.div>
-                <div className="flex flex-col gap-4 pt-4 w-fit justify-center items-center mx-auto">
+                <div className="flex flex-col items-center justify-center gap-4 pt-4 mx-auto w-fit">
                   <ButtonReflexo
                     icon={
                       <svg
@@ -141,14 +141,14 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
                     colorMode={colorMode}
                     className="mt-12"
                   />
-                  <ButtonReflexo
+                  {/* <ButtonReflexo
                     id="ligar"
                     icon={<Phone width={20} />}
                     link={`tel:${content.texts.infos.phone}`}
                     label="Emergência? Ligue agora!"
                     colorMode={colorMode}
                     className="text-white"
-                  />
+                  /> */}
                 </div>
               </div>
 
@@ -156,7 +156,7 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
+                transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
                 className="order-1 lg:order-2 space-y-8 w-[90%] desktop1:w-[50%]"
               >
                 <SectionHeaderNovo
@@ -206,7 +206,7 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
                     </div>
                   </div>
                 ) : (
-                  <div className="grid tablet1:grid-cols-2 gap-6">
+                  <div className="grid gap-6 tablet1:grid-cols-2">
                     {features.slice(0, 4).map((feature, idx) => (
                       <motion.div
                         key={idx}
@@ -237,7 +237,7 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
         </section>
       </SectionWrapper>
     </SectionArea>
-  )
+  );
 }
 
-export default FeaturesNovaTemplate
+export default FeaturesNovaTemplate;
