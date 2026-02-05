@@ -82,6 +82,7 @@ function NavbarNovaTemplate({
               offset={-90}
               // spy={true}
               // hashSpy={true}
+              className="cursor-pointer"
             >
               <img
                 src={content.texts.navbar.logo.img}
