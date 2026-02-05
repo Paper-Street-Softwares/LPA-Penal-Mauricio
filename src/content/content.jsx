@@ -165,7 +165,7 @@ const content = {
       obsHero: {
         icon: <LucideIdCard />,
         iconTwo: <LucideIdCard />,
-        text: 'Não espere nem mais um minuto, sua liberdade depende disso!',
+        text: ' A atuação imediata da defesa é decisiva para a proteção da liberdade.',
         textTwo: 'A_Definir',
       },
       secondaryCta: 'Contato',
@@ -189,28 +189,54 @@ const content = {
       },
     },
     important: {
-      miniTag: 'A_Definir',
+      miniTag: '',
       title: 'O que é importante saber',
       cards: {
         card1: {
           title: 'Fui preso. Posso ficar calado ou isso piora tudo?',
-          paragraph:
-            'Mantenha a calma e fique em silêncio. Não diga nada e entre em contato comigo agora mesmo. Falar sem orientação vai piorar tudo.',
+          paragraph: (
+            <>
+              Mantenha a calma e fique em silêncio, isso é um direito seu e{' '}
+              <strong>não pode ser usado contra você</strong>.
+              <br />O silêncio não é confissão, entre em contato com um
+              especialista agora mesmo. Falar sem orientação pode piorar tudo.
+            </>
+          ),
         },
         card2: {
           title: 'Meu parente foi preso, o que posso fazer?',
-          paragraph:
-            'Descubra para onde ele foi levado e entre em contato imediatamente. As primeiras horas são decisivas para a liberdade dele.',
+          paragraph: (
+            <>
+              Descubra imediatamente <strong> onde ele está custodiado</strong>{' '}
+              e <strong>entre em contato com um advogado</strong>.
+              <br /> As primeiras horas são decisivas é nesse momento que se
+              definem medidas como flagrante, fiança, liberdade provisória e
+              audiência de custódia
+            </>
+          ),
         },
         card3: {
           title: 'Tem como soltar ele agora? ',
-          paragraph:
-            'Cada caso deve ser analisado, o tempo é primordial. Fale comigo agora para agir imediatamente.',
+          paragraph: (
+            <>
+              Cada situação exige análise jurídica imediata.
+              <br />O tempo é decisivo: quanto mais rápido agir, maiores as
+              chances de medidas como fiança, liberdade provisória ou
+              relaxamento da prisão.
+            </>
+          ),
         },
         card4: {
           title: 'Quanto tempo eu tenho para me defender?',
-          paragraph:
-            'Cada minuto que passa sua situação se complica mais. Então não espere nada mais e conte com nossa ajuda imediata.',
+          paragraph: (
+            <>
+              Desde o primeiro minuto após a prisão. Cada instante é decisivo e
+              pode impactar diretamente a situação jurídica.
+              <br />
+              Quanto antes houver atuação jurídica, maiores são as chances de
+              proteger direitos e buscar a liberdade.
+            </>
+          ),
         },
       },
       fraseObs:
