@@ -210,7 +210,7 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
                     {features.slice(0, 4).map((feature, idx) => (
                       <motion.div
                         key={idx}
-                        className={`group p-6 rounded-xl ${cardBg} ${hoverCardBg} transition-all duration-700 cursor-pointer`}
+                        className={`group p-6 rounded-xl ${cardBg} ${hoverCardBg} transition-all duration-700`}
                       >
                         <div
                           className={`w-10 h-10 rounded-full ${iconBg} mb-4 flex items-center justify-center shadow-sm transition-transform`}

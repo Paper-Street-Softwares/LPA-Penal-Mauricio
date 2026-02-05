@@ -1,9 +1,9 @@
-import React from 'react'
-import SectionArea from '../sectionElements/SectionArea'
-import SectionWrapper from '../sectionElements/SectionWrapper'
-import SectionHeaderNovo from '../sectionElements/SectionHeaderNovo'
-import { motion } from 'framer-motion'
-import { Scale, HomeIcon, Building2, Coins } from 'lucide-react'
+import React from "react";
+import SectionArea from "../sectionElements/SectionArea";
+import SectionWrapper from "../sectionElements/SectionWrapper";
+import SectionHeaderNovo from "../sectionElements/SectionHeaderNovo";
+import { motion } from "framer-motion";
+import { Scale, HomeIcon, Building2, Coins } from "lucide-react";
 
 function Cards({ colorMode }) {
   let text,
@@ -14,44 +14,44 @@ function Cards({ colorMode }) {
     lineColor,
     textDestaque,
     image,
-    borderT
+    borderT;
 
   switch (colorMode) {
-    case 'light':
-      backgroundMode = 'bg-secondary/60'
-      text = 'text-corTitulosPreto'
-      textOpacity = 'text-corOutrosTextosPreto'
-      stepNumberBg = 'bg-white'
-      stepNumberText = 'text-primaryDark'
-      lineColor = 'bg-primaryDark/20'
-      textDestaque = 'text-primaryDark'
-      image = ' border-[8px] border-white'
-      borderT = 'border-t-primaryDark'
-      break
-    case 'dark':
-      backgroundMode = 'bg-darkOpacity'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      backgroundMode = 'bg-dark'
-      stepNumberBg = 'bg-dark'
-      stepNumberText = 'text-primaryLight'
-      lineColor = 'bg-primaryLight/20'
-      textDestaque = 'text-primaryLight'
-      image = ' border-[8px] border-borderImage'
-      borderT = 'border-t-primaryLight'
+    case "light":
+      backgroundMode = "bg-secondary/60";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      stepNumberBg = "bg-white";
+      stepNumberText = "text-primaryDark";
+      lineColor = "bg-primaryDark/20";
+      textDestaque = "text-primaryDark";
+      image = " border-[8px] border-white";
+      borderT = "border-t-primaryDark";
+      break;
+    case "dark":
+      backgroundMode = "bg-darkOpacity";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      backgroundMode = "bg-dark";
+      stepNumberBg = "bg-dark";
+      stepNumberText = "text-primaryLight";
+      lineColor = "bg-primaryLight/20";
+      textDestaque = "text-primaryLight";
+      image = " border-[8px] border-borderImage";
+      borderT = "border-t-primaryLight";
 
-      break
+      break;
     default:
-      backgroundMode = 'bg-secondary/60'
-      text = 'text-corTitulosBranca'
-      textOpacity = 'text-corOutrosTextosBranca'
-      backgroundMode = 'bg-secondary/60'
-      stepNumberBg = 'bg-white'
-      stepNumberText = 'text-primaryDark'
-      lineColor = 'bg-primaryDark/20'
-      textDestaque = 'text-primaryDark'
-      image = ' border-[8px] border-white'
-      borderT = 'border-t-primaryDark'
+      backgroundMode = "bg-secondary/60";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      backgroundMode = "bg-secondary/60";
+      stepNumberBg = "bg-white";
+      stepNumberText = "text-primaryDark";
+      lineColor = "bg-primaryDark/20";
+      textDestaque = "text-primaryDark";
+      image = " border-[8px] border-white";
+      borderT = "border-t-primaryDark";
   }
   return (
     <SectionArea className={`bg-gray-50`}>
@@ -65,7 +65,7 @@ function Cards({ colorMode }) {
               colorMode={colorMode}
             />
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+            <div className="grid grid-cols-1 gap-6 mt-16 sm:grid-cols-2 lg:grid-cols-4">
               {/* Card 1 */}
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
@@ -76,12 +76,12 @@ function Cards({ colorMode }) {
                 <div
                   className={`h-full cursor-pointer border-t-4 ${borderT} hover:shadow-xl transition-shadow duration-300`}
                 >
-                  {' '}
-                  <div className="pt-8 px-6 pb-8 h-full flex flex-col">
-                    <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center text-primary mb-6">
+                  {" "}
+                  <div className="flex flex-col h-full px-6 pt-8 pb-8">
+                    <div className="flex items-center justify-center mb-6 rounded-full w-14 h-14 bg-blue-50 text-primary">
                       <Scale className="w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-secondFont font-bold text-primary mb-3">
+                    <h3 className="mb-3 text-xl font-bold font-secondFont text-primary">
                       Sucessões + Família
                     </h3>
                     <p
@@ -106,11 +106,11 @@ function Cards({ colorMode }) {
                 <div
                   className={`h-full cursor-pointer border-t-4 ${borderT} hover:shadow-xl transition-shadow duration-300`}
                 >
-                  <div className="pt-8 px-6 pb-8 h-full flex flex-col">
-                    <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center text-primary mb-6">
+                  <div className="flex flex-col h-full px-6 pt-8 pb-8">
+                    <div className="flex items-center justify-center mb-6 rounded-full w-14 h-14 bg-blue-50 text-primary">
                       <HomeIcon className="w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-secondFont font-bold text-primary mb-3">
+                    <h3 className="mb-3 text-xl font-bold font-secondFont text-primary">
                       Sucessões + Direito Imobiliário
                     </h3>
                     <p
@@ -135,12 +135,12 @@ function Cards({ colorMode }) {
                 <div
                   className={`h-full cursor-pointer border-t-4 ${borderT} hover:shadow-xl transition-shadow duration-300`}
                 >
-                  {' '}
-                  <div className="pt-8 px-6 pb-8 h-full flex flex-col">
-                    <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center text-primary mb-6">
+                  {" "}
+                  <div className="flex flex-col h-full px-6 pt-8 pb-8">
+                    <div className="flex items-center justify-center mb-6 rounded-full w-14 h-14 bg-blue-50 text-primary">
                       <Building2 className="w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-secondFont font-bold text-primary mb-3">
+                    <h3 className="mb-3 text-xl font-bold font-secondFont text-primary">
                       Sucessões + Direito Empresarial
                     </h3>
                     <p
@@ -165,11 +165,11 @@ function Cards({ colorMode }) {
                 <div
                   className={`h-full cursor-pointer border-t-4 ${borderT} hover:shadow-xl transition-shadow duration-300`}
                 >
-                  <div className="pt-8 px-6 pb-8 h-full flex flex-col">
-                    <div className="w-14 h-14 rounded-full bg-blue-50 flex items-center justify-center text-primary mb-6">
+                  <div className="flex flex-col h-full px-6 pt-8 pb-8">
+                    <div className="flex items-center justify-center mb-6 rounded-full w-14 h-14 bg-blue-50 text-primary">
                       <Coins className="w-7 h-7" />
                     </div>
-                    <h3 className="text-xl font-secondFont font-bold text-primary mb-3">
+                    <h3 className="mb-3 text-xl font-bold font-secondFont text-primary">
                       Sucessões + Obrigações e Contratos
                     </h3>
                     <p
@@ -188,7 +188,7 @@ function Cards({ colorMode }) {
         </section>
       </SectionWrapper>
     </SectionArea>
-  )
+  );
 }
 
-export default Cards
+export default Cards;
