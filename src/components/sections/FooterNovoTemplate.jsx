@@ -10,6 +10,7 @@ import content from '../../content/content'
 function FooterNovoTemplate({
   mapa,
   colorMode,
+  phone,
   phoneSecond,
   expediente,
   adress,
@@ -36,7 +37,7 @@ function FooterNovoTemplate({
       text = 'text-corTitulosPreto'
       textOpacity = 'text-corOutrosTextosPreto'
       iconColor = 'text-primaryDark/60'
-      backgroundMode = 'bg-terciary/60'
+      backgroundMode = 'bg-white'
       break
     case 'dark':
       text = 'text-corTitulosBranca'
@@ -61,13 +62,20 @@ function FooterNovoTemplate({
             >
               {/* Logo e infos */}
               <div className="space-y-6">
-                <img
-                  src={content.texts.navbar.logo.img}
-                  alt={content.texts.navbar.logo.alt}
-                  className="w-[50%]"
-                  width={187}
-                  height={119}
-                />
+                <a
+                  className="cursor-pointer"
+                  href="/"
+                  onClick={() => window.location.reload()}
+                  aria-label="recarregar página "
+                >
+                  <img
+                    src={content.texts.navbar.logo.img}
+                    alt={content.texts.navbar.logo.alt}
+                    className="w-[50%]"
+                    width={187}
+                    height={119}
+                  />
+                </a>{' '}
                 <p
                   className={`leading-relaxed font-secondFont font-light ${textOpacity}`}
                 >
@@ -164,12 +172,14 @@ function FooterNovoTemplate({
                         </span>
                       </li>
                     )}
-                    <li className="flex items-center gap-3">
-                      <Phone className={`w-5 h-5 shrink-0 ${iconColor}`} />
-                      <span className="font-secondFont font-light">
-                        {content.texts.infos.phone}
-                      </span>
-                    </li>
+                    {phone && (
+                      <li className="flex items-center gap-3">
+                        <Phone className={`w-5 h-5 shrink-0 ${iconColor}`} />
+                        <span className="font-secondFont font-light">
+                          {content.texts.infos.phone}
+                        </span>
+                      </li>
+                    )}
                     {phoneSecond && (
                       <li className="flex items-center gap-3">
                         <Phone className={`w-5 h-5 shrink-0 ${iconColor}`} />
