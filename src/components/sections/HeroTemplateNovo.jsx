@@ -76,7 +76,7 @@ function HeroTemplateNovo({
       paddingTopAndBottom={false}
       className={`${backgroundMode}`}
     >
-      <section className="relative min-h-[90vh] w-full pt-[90px] phone2:pt-[90px] pb-[30px] tablet1:pb-[64px] desktop1:pb-[96px] phone3:pt-[100px] tablet1:pt-[170px] desktop1:pt-[180px] flex items-center justify-center overflow-hidden font-mainFont">
+      <section className="relative w-full pt-[90px] phone2:pt-[120px] tablet1:pt-[134px] desktop1:pt-[175px] desktop2:pt-[190px] pb-[64px] desktop1:pb-[96px] flex items-center justify-center overflow-hidden font-mainFont">
         {/* Abstract Background Shapes */}
         <div
           className={`absolute top-0 right-[-10px] h-full w-[80%] -skew-x-12 translate-x-2/4 z-0 ${bgFaixaHero}`}
@@ -85,14 +85,14 @@ function HeroTemplateNovo({
           className={`absolute bottom-0 left-0 w-[40%] h-1/2 rounded-full blur-3xl -translate-x-1/4 translate-y-1/4 z-0 ${backgroundMode}`}
         />
         <SectionWrapper>
-          <div className="container relative z-10 grid items-center gap-4 lg:grid-cols-2 phone2:gap-6 lg:gap-20">
+          <div className=" w-full relative z-10 grid items-center gap-4 lg:grid-cols-2 phone2:gap-6 lg:gap-20">
             {/* Content */}
 
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, ease: "easeOut" }}
-              className="flex flex-col items-start order-2 space-y-2 desktop1:space-y-8 lg:order-1 desktop1:items-start"
+              className=" space-y-2 phone2:space-y-3 phone3:space-y-4 tablet1:space-y-6 order-2 lg:order-1 flex flex-col items-start desktop1:items-start"
             >
               <div
                 className={`inline-flex items-center gap-2 px-4 py-1.5 rounded-full border shadow-sm text-[8px] phone2:text-xs font-secondFont font-bold tracking-wide uppercase ${bgMinitag}`}
@@ -107,11 +107,11 @@ function HeroTemplateNovo({
               </h1>
 
               <p
-                className={`text-start desktop1:text-start text-[8px] phone2:text-[12px] phone3:text-[14px] md:text-xl leading-relaxed max-w-lg font-secondFont font-extralight ${textOpacity}`}
+                className={`text-start text-[12px] phone2:text-lg md:text-xl leading-relaxed max-w-lg font-secondFont font-extralight desktop1:text-start ${textOpacity}`}
               >
                 {content.texts.hero.subtitle}
               </p>
-              <div className="flex flex-col gap-4 pt-4">
+              <div className="flex flex-col gap-4 pt-2 phone2:pt-4">
                 <ButtonReflexo
                   icon={
                     <svg
@@ -163,7 +163,7 @@ function HeroTemplateNovo({
               className="relative order-1 lg:order-2"
             >
               <div
-                className={`relative rounded-[1.5rem] phone2:rounded-[2.5rem] overflow-hidden aspect-[2/1] phone2:aspect-[3/2] md:aspect-[3/2] shadow-2xl lg:aspect-[3/4] ring-1 ring-black/5 bg-gray-100 ${image}`}
+                className={`relative rounded-[1.5rem] phone3:rounded-[2.5rem] overflow-hidden aspect-[2/1] phone3:aspect-[3/2] md:aspect-[3/2] lg:aspect-[3/4] ring-1 ring-black/5 ${borderColor} ${image}`}
               >
                 <img
                   src={content.texts.hero.heroDefaulMobiletImg}

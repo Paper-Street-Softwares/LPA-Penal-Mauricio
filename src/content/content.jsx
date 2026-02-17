@@ -1,14 +1,14 @@
-import logo from '../assets/imgs/logo/logo.webp'
-import heroDefaultImg from '../assets/imgs/hero/lawHero.webp'
-import heroDefaultMobileImg from '../assets/imgs/hero/lawHeroMobile.webp'
-import imgFeatures from '../assets/imgs/features/imgServices.webp'
+import logo from "../assets/imgs/logo/logo.webp";
+import heroDefaultImg from "../assets/imgs/hero/lawHero.webp";
+import heroDefaultMobileImg from "../assets/imgs/hero/lawHeroMobile.webp";
+import imgFeatures from "../assets/imgs/features/imgServices.webp";
 
-import aboutImg from '../assets/imgs/about/aboutImg.webp'
+import aboutImg from "../assets/imgs/about/aboutImg.webp";
 // import team1 from '../assets/imgs/team/team1.webp'
 // import team2 from '../assets/imgs/team/team2.webp'
 // import aboutSocialImg from '../assets/imgs/about/aboutSocial.webp'
 
-import imgSteps from '../assets/imgs/steps/imgSteps.webp'
+import imgSteps from "../assets/imgs/steps/imgSteps.webp";
 
 import {
   Baby,
@@ -28,31 +28,31 @@ import {
   CameraOff,
   SwitchCamera,
   Cctv,
-} from 'lucide-react'
-import { Users } from 'lucide-react'
-import { FileText } from 'lucide-react'
+} from "lucide-react";
+import { Users } from "lucide-react";
+import { FileText } from "lucide-react";
 
-const currentYear = new Date().getFullYear()
+const currentYear = new Date().getFullYear();
 
 export const infos = {
-  name: 'Dr. Maurício Batista',
-  email: 'contato', // Email desejado pelo cliente
-  emailSecundario: 'A_Definir', // Email desejado pelo cliente
-  domain: 'mauriciobatista.adv.br', // Sem "www"
+  name: "Dr. Maurício Batista",
+  email: "contato", // Email desejado pelo cliente
+  emailSecundario: "A_Definir", // Email desejado pelo cliente
+  domain: "mauriciobatista.adv.br", // Sem "www"
   phone: {
-    ddd: '51',
-    firstPart: '99803', // Apenas os 5 primeiros números (incluindo o 9)
-    secondPart: '4276', // Apenas os 4 últimos números
+    ddd: "51",
+    firstPart: "99803", // Apenas os 5 primeiros números (incluindo o 9)
+    secondPart: "4276", // Apenas os 4 últimos números
   },
   phoneSecundario: {
-    ddd: 'A_Definir',
-    firstPart: 'A_Definir', // Apenas os 5 primeiros números (incluindo o 9)
-    secondPart: 'A_Definir', // Apenas os 4 últimos números
+    ddd: "A_Definir",
+    firstPart: "A_Definir", // Apenas os 5 primeiros números (incluindo o 9)
+    secondPart: "A_Definir", // Apenas os 4 últimos números
   },
   phoneTerciario: {
-    ddd: 'A_Definir',
-    firstPart: 'A_Definir', // Apenas os 5 primeiros números (incluindo o 9)
-    secondPart: 'A_Definir', // Apenas os 4 últimos números
+    ddd: "A_Definir",
+    firstPart: "A_Definir", // Apenas os 5 primeiros números (incluindo o 9)
+    secondPart: "A_Definir", // Apenas os 4 últimos números
   },
   endereco: (
     <div>
@@ -75,18 +75,18 @@ export const infos = {
     </div>
   ),
   obs: <span className="italic">A_Definir </span>,
-  instagramProfile: '', // Sem o @
-  facebookProfile: '',
-  linkeDinProfile: '',
-  x: '',
-  tiktokProfile: '',
+  instagramProfile: "", // Sem o @
+  facebookProfile: "",
+  linkeDinProfile: "",
+  x: "",
+  tiktokProfile: "",
 
   whatsappDefaultMessage:
-    'Olá! Preciso da ajuda urgente de um advogado criminalista. Pode me ajudar?',
+    "Olá! Preciso da ajuda urgente de um advogado criminalista. Pode me ajudar?",
   whatsChatDefaultMessage:
-    'Gostaria de falar conosco agora mesmo? Clque abaixo 👇',
-  slogan: '',
-}
+    "Gostaria de falar conosco agora mesmo? Clque abaixo 👇",
+  slogan: "",
+};
 
 const content = {
   texts: {
@@ -100,23 +100,23 @@ const content = {
         alt: `Logomarca ${infos.name}`,
       },
       menuItems: [
-        'Início',
-        'Serviços',
-        'Sobre',
-        'Perguntas',
+        "Início",
+        "Serviços",
+        "Sobre",
+        "Perguntas",
         // 'Blog',
         // 'Mapa',
       ],
-      menuId: ['home', 'feature', 'about', 'faq'],
-      ariaLabel: 'Botão de Contato',
-      ctaButtonText: 'Contato',
-      ctaButtonTextResponsive: 'Contato',
+      menuId: ["home", "feature", "about", "faq"],
+      ariaLabel: "Botão de Contato",
+      ctaButtonText: "Contato",
+      ctaButtonTextResponsive: "Contato",
     },
     hero: {
-      miniTag: 'Plantão 24h - atendimento imediato',
+      miniTag: "Plantão 24h - atendimento imediato",
       title: (
         <h1>
-          Advogado{' '}
+          Advogado{" "}
           <span className="destaque relative italic font-light">
             Criminalista
             <span>
@@ -145,58 +145,58 @@ const content = {
                 />
               </svg>
             </span>
-          </span>{' '}
+          </span>{" "}
         </h1>
       ),
       subtitle: (
         <p>
           Atuação <strong className="text-primaryLight">URGENTE</strong> em
           casos de prisão em flagrante, audiência de custódia, Habeas Corpus,
-          liberdade provisória e medidas emergenciais.{' '}
+          liberdade provisória e medidas emergenciais.{" "}
         </p>
       ),
       heroDefaultImage: heroDefaultImg, // img da pessoa mobile
       heroDefaulMobiletImg: heroDefaultMobileImg,
-      alt: 'Imagem ilustrativa da Seção Início',
+      alt: "Imagem ilustrativa da Seção Início",
       ctaButtonAriaLabel:
-        'Botão para chamada de ação para contato pelo whatsapp',
-      ctaButtonText: 'Seja atendido agora no WhatsApp',
-      ctaButtonTextSecondary: 'A_Definir',
+        "Botão para chamada de ação para contato pelo whatsapp",
+      ctaButtonText: "Seja atendido agora no WhatsApp",
+      ctaButtonTextSecondary: "A_Definir",
       obsHero: {
         icon: <LucideIdCard />,
         iconTwo: <LucideIdCard />,
-        text: ' A atuação imediata da defesa é decisiva para a proteção da liberdade.',
-        textTwo: 'A_Definir',
+        text: " A atuação imediata da defesa é decisiva para a proteção da liberdade.",
+        textTwo: "A_Definir",
       },
-      secondaryCta: 'Contato',
+      secondaryCta: "Contato",
       images: {
         static: {
           img: {},
-          alt: '',
+          alt: "",
         },
         slide1: {
           img: {},
-          alt: '',
+          alt: "",
         },
         slide2: {
           img: {},
-          alt: '',
+          alt: "",
         },
         slide3: {
           img: {},
-          alt: '',
+          alt: "",
         },
       },
     },
     important: {
-      miniTag: '',
-      title: 'O que é importante saber',
+      miniTag: "Atenção",
+      title: "O que é importante saber",
       cards: {
         card1: {
-          title: 'Fui preso. Posso ficar calado ou isso piora tudo?',
+          title: "Fui preso. Posso ficar calado ou isso piora tudo?",
           paragraph: (
             <>
-              Mantenha a calma e fique em silêncio, isso é um direito seu e{' '}
+              Mantenha a calma e fique em silêncio, isso é um direito seu e{" "}
               <strong>não pode ser usado contra você</strong>.
               <br />O silêncio não é confissão, entre em contato com um
               especialista agora mesmo. Falar sem orientação pode piorar tudo.
@@ -204,10 +204,10 @@ const content = {
           ),
         },
         card2: {
-          title: 'Meu parente foi preso, o que posso fazer?',
+          title: "Meu parente foi preso, o que posso fazer?",
           paragraph: (
             <>
-              Descubra imediatamente <strong> onde ele está custodiado</strong>{' '}
+              Descubra imediatamente <strong> onde ele está custodiado</strong>{" "}
               e <strong>entre em contato com um advogado</strong>.
               <br /> As primeiras horas são decisivas é nesse momento que se
               definem medidas como flagrante, fiança, liberdade provisória e
@@ -216,7 +216,7 @@ const content = {
           ),
         },
         card3: {
-          title: 'Tem como soltar ele agora? ',
+          title: "Tem como soltar ele agora? ",
           paragraph: (
             <>
               Cada situação exige análise jurídica imediata.
@@ -227,7 +227,7 @@ const content = {
           ),
         },
         card4: {
-          title: 'Quanto tempo eu tenho para me defender?',
+          title: "Quanto tempo eu tenho para me defender?",
           paragraph: (
             <>
               Desde o primeiro minuto após a prisão. Cada instante é decisivo e
@@ -240,11 +240,11 @@ const content = {
         },
       },
       fraseObs:
-        'Cada caso é diferente. Agir rápido e com orientação jurídica pode mudar completamente o rumo do processo.',
-      ctaButtonText: 'Falar agora com um advogado',
+        "Cada caso é diferente. Agir rápido e com orientação jurídica pode mudar completamente o rumo do processo.",
+      ctaButtonText: "Falar agora com um advogado",
     },
     features: {
-      miniTag: 'COMO POSSO AJUDAR',
+      miniTag: "COMO POSSO AJUDAR",
       title: (
         <h1>
           Apoio jurídico
@@ -252,15 +252,15 @@ const content = {
           quem precisa agir sem perder tempo
         </h1>
       ),
-      subtitle: '',
+      subtitle: "",
       imgFeatures: imgFeatures,
-      alt: 'imagem representativa da Seção Serviços',
-      titleMessageFeature: 'Prisão não é o fim. ',
-      subtitleMessageFeature: 'Defesa imediata pode mudar tudo.',
+      alt: "imagem representativa da Seção Serviços",
+      titleMessageFeature: "Prisão não é o fim. ",
+      subtitleMessageFeature: "Defesa imediata pode mudar tudo.",
       cards: {
         card1: {
-          title: 'Acompanhamento em Delegacia e Prisão em Flagrante',
-          subtitle: 'Advogado ao seu lado na delegacia e no flagrante.',
+          title: "Acompanhamento em Delegacia e Prisão em Flagrante",
+          subtitle: "Advogado ao seu lado na delegacia e no flagrante.",
           description: (
             <div>
               A_Definir
@@ -270,12 +270,12 @@ const content = {
             </div>
           ),
           icon: <Cctv />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card2: {
-          title: 'Audiência de Custódia',
-          subtitle: 'Defesa para tentar garantir a liberdade já na audiência.',
+          title: "Audiência de Custódia",
+          subtitle: "Defesa para tentar garantir a liberdade já na audiência.",
           description: (
             <div>
               A_Definir
@@ -285,12 +285,12 @@ const content = {
             </div>
           ),
           icon: <Scale />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card3: {
-          title: 'Tribunal do Júri',
-          subtitle: 'Atuação no julgamento que pode definir seu futuro.',
+          title: "Tribunal do Júri",
+          subtitle: "Atuação no julgamento que pode definir seu futuro.",
           description: (
             <div>
               A_Definir <br />
@@ -299,13 +299,13 @@ const content = {
             </div>
           ),
           icon: <Gavel />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card4: {
-          title: 'Inquérito e Processo Criminal',
+          title: "Inquérito e Processo Criminal",
           subtitle:
-            'Assistência jurídica do início da investigação até o fim do processo.',
+            "Assistência jurídica do início da investigação até o fim do processo.",
           description: (
             <div>
               A_Definir
@@ -315,12 +315,12 @@ const content = {
             </div>
           ),
           icon: <FileText />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card5: {
-          title: 'A_Definir',
-          subtitle: 'A_Definir',
+          title: "A_Definir",
+          subtitle: "A_Definir",
           description: (
             <div>
               A_Definir
@@ -347,12 +347,12 @@ const content = {
               <path d="M12 18V6" />
             </svg>
           ),
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
         card6: {
-          title: 'A_Definir',
-          subtitle: 'A_Definir',
+          title: "A_Definir",
+          subtitle: "A_Definir",
           description: (
             <div>
               A_Definir
@@ -362,50 +362,50 @@ const content = {
             </div>
           ),
           icon: <Scale />,
-          buttonLabelModal: 'Fale Conosco',
-          buttonLabel: 'Saiba Mais',
+          buttonLabelModal: "Fale Conosco",
+          buttonLabel: "Saiba Mais",
         },
       },
       moreFeatures: {
         card1: {
-          ico: 'A_Definir',
-          title: 'A_Definir',
-          subtitle: 'A_Definir',
+          ico: "A_Definir",
+          title: "A_Definir",
+          subtitle: "A_Definir",
         },
         card2: {
-          ico: 'A_Definir',
-          title: 'A_Definir',
-          subtitle: 'A_Definir',
+          ico: "A_Definir",
+          title: "A_Definir",
+          subtitle: "A_Definir",
         },
         card3: {
-          ico: 'A_Definir',
-          title: 'A_Definir',
-          subtitle: 'A_Definir',
+          ico: "A_Definir",
+          title: "A_Definir",
+          subtitle: "A_Definir",
         },
       },
-      ctaButtonText: 'Receba orientação jurídica agora',
+      ctaButtonText: "Receba orientação jurídica agora",
     },
     maps: {
-      minitag: 'A_Definir',
-      title: 'A_Definir',
-      subtitle: 'A_Definir',
-      embedsrc: 'A_Definir',
+      minitag: "A_Definir",
+      title: "A_Definir",
+      subtitle: "A_Definir",
+      embedsrc: "A_Definir",
     },
     about: {
       imagem: {
         img: aboutImg,
-        alt: 'Imagem ilustrativa da Seção Sobre',
+        alt: "Imagem ilustrativa da Seção Sobre",
       },
-      miniTag: 'QUEM É O DR. MAURÍCIO BATISTA',
+      miniTag: "QUEM É O DR. MAURÍCIO BATISTA",
       title: (
         <h1>
           Referência em Direito
-          <span className="destaque italic font-light"> Penal</span>{' '}
+          <span className="destaque italic font-light"> Penal</span>{" "}
         </h1>
       ),
-      SecondPartTitle: '',
+      SecondPartTitle: "",
       subtitle:
-        'Atuação responsável, estratégica e humana nos momentos mais críticos',
+        "Atuação responsável, estratégica e humana nos momentos mais críticos",
       paragraph: (
         <div>
           Desde cedo, Maurício Batista escolheu o Direito como caminho. Com
@@ -421,7 +421,7 @@ const content = {
         </div>
       ),
 
-      buttonModalLabelAbout: 'Continuar lendo',
+      buttonModalLabelAbout: "Continuar lendo",
       modal: (
         <p className="text-mutedForeground font-secondFont">
           A_Definir
@@ -433,10 +433,10 @@ const content = {
           A_Definir
         </p>
       ),
-      paragraphModalCta: 'Entre em contato',
-      titleModal: 'A_Definir',
-      ctaButtonAriaLabel: 'Botão para entrar em contato',
-      ctaButtonText: 'Falar diretamente com o advogado',
+      paragraphModalCta: "Entre em contato",
+      titleModal: "A_Definir",
+      ctaButtonAriaLabel: "Botão para entrar em contato",
+      ctaButtonText: "Falar diretamente com o advogado",
       // aboutSocial: {
       //   img: {
       //     img: aboutSocialImg,
@@ -481,7 +481,7 @@ const content = {
     //   },
     // },
     steps: {
-      miniTag: 'COMO ATUAMOS NO SEU CASO CRIMINAL',
+      miniTag: "COMO ATUAMOS NO SEU CASO CRIMINAL",
       title: (
         <h1>
           Atuação
@@ -489,39 +489,39 @@ const content = {
           para proteger seus direitos e sua liberdade
         </h1>
       ),
-      subtitle: '',
+      subtitle: "",
       img: imgSteps,
-      alt: 'Imagem ilustrativa da Seção Passo a Passo',
+      alt: "Imagem ilustrativa da Seção Passo a Passo",
       cards: {
         card1: {
           stepNumber: 1,
-          cardTitle: 'Análise imediata da situação criminal',
+          cardTitle: "Análise imediata da situação criminal",
           cardDescription:
-            'Analisamos o que já aconteceu no caso, como prisão, flagrante, intimação ou investigação, identificando riscos, ilegalidades e as melhores medidas a serem tomadas desde o início.',
+            "Analisamos o que já aconteceu no caso, como prisão, flagrante, intimação ou investigação, identificando riscos, ilegalidades e as melhores medidas a serem tomadas desde o início.",
         },
         card2: {
           stepNumber: 2,
-          cardTitle: 'Medidas urgentes para reduzir riscos imediatos',
+          cardTitle: "Medidas urgentes para reduzir riscos imediatos",
           cardDescription:
-            'Com base na análise, adotamos as providências jurídicas cabíveis para tentar garantir a liberdade, evitar prisões desnecessárias e corrigir falhas que possam prejudicar o processo.',
+            "Com base na análise, adotamos as providências jurídicas cabíveis para tentar garantir a liberdade, evitar prisões desnecessárias e corrigir falhas que possam prejudicar o processo.",
         },
         card3: {
           stepNumber: 3,
-          cardTitle: 'Definição da melhor estratégia de defesa',
+          cardTitle: "Definição da melhor estratégia de defesa",
           cardDescription:
-            'Traçamos uma estratégia clara para o caso, avaliando provas, depoimentos e possibilidades legais, sempre focando na proteção dos direitos e na redução de danos ao longo do processo.',
+            "Traçamos uma estratégia clara para o caso, avaliando provas, depoimentos e possibilidades legais, sempre focando na proteção dos direitos e na redução de danos ao longo do processo.",
         },
         card4: {
           stepNumber: 4,
-          cardTitle: 'Acompanhamento próximo e comunicação clara',
+          cardTitle: "Acompanhamento próximo e comunicação clara",
           cardDescription:
-            'Você e sua família acompanham cada etapa com explicações objetivas, prazos definidos e orientação constante, sabendo exatamente o que está sendo feito e o que esperar.',
+            "Você e sua família acompanham cada etapa com explicações objetivas, prazos definidos e orientação constante, sabendo exatamente o que está sendo feito e o que esperar.",
         },
       },
-      ctaButtonText: 'Falar diretamente comigo',
+      ctaButtonText: "Falar diretamente comigo",
     },
     ctaSecondary: {
-      miniTag: 'Estamos de plantão',
+      miniTag: "Estamos de plantão",
       title: <h1>Não espere mais para proteger sua liberdade</h1>,
       subtitle: (
         <div>
@@ -534,23 +534,23 @@ const content = {
       container: {
         label1: {
           icon: <Check />,
-          text: ' Análise inicial do seu caso criminal',
+          text: " Análise inicial do seu caso criminal",
         },
         label2: {
           icon: <Check />,
-          text: ' Atendimento direto com advogado criminalista',
+          text: " Atendimento direto com advogado criminalista",
         },
         label3: {
           icon: <Check />,
-          text: ' Resposta rápida e acompanhamento pelo WhatsApp',
+          text: " Resposta rápida e acompanhamento pelo WhatsApp",
         },
         label4: {
           icon: <Check />,
-          text: ' Atuação iniciada imediatamente após a análise',
+          text: " Atuação iniciada imediatamente após a análise",
         },
         label5: {
           icon: <Check />,
-          text: ' Mais segurança para você e sua família em um momento decisivo',
+          text: " Mais segurança para você e sua família em um momento decisivo",
         },
       },
       // subtitleDireita: (
@@ -561,9 +561,9 @@ const content = {
       // titleDireita: (
       //   <h1 className="text-title5 my-3 font-mainFont">WhatsApp</h1>
       // ),
-      ctaButtonText: 'Converse agora com um advogado',
+      ctaButtonText: "Converse agora com um advogado",
       ctaButtonAriaLabel:
-        'Botão para chamada de ação para contato pelo whatsapp',
+        "Botão para chamada de ação para contato pelo whatsapp",
     },
     // blog: {
     //   miniTag: 'BLOG',
@@ -575,33 +575,33 @@ const content = {
     //   blogLink: 'mauromoncao.wordpress.com', //sem "https://"
     // },
     faq: {
-      miniTag: 'TIRE SUAS DÚVIDAS',
-      title: 'Perguntas Frequentes',
-      subtitle: 'Confira as perguntas abaixo para esclarecer suas dúvidas. ',
+      miniTag: "TIRE SUAS DÚVIDAS",
+      title: "Perguntas Frequentes",
+      subtitle: "Confira as perguntas abaixo para esclarecer suas dúvidas. ",
       questions: {
         question1: {
-          question: 'Como funciona a contratação e o atendimento?',
+          question: "Como funciona a contratação e o atendimento?",
           answer:
-            'O primeiro passo é o contato direto via WhatsApp para agendamento de uma consulta (presencial ou online). Analisaremos os fatos imediatamente para definir a viabilidade da defesa e o planejamento estratégico necessário.',
+            "O primeiro passo é o contato direto via WhatsApp para agendamento de uma consulta (presencial ou online). Analisaremos os fatos imediatamente para definir a viabilidade da defesa e o planejamento estratégico necessário.",
         },
         question2: {
-          question: 'Quanto tempo dura um processo criminal?',
+          question: "Quanto tempo dura um processo criminal?",
           answer:
-            'O tempo é variável e depende do rito processual (comum, júri, especial) e da agilidade do Judiciário. Durante a análise do caso, apresentamos um panorama das etapas prováveis e trabalhamos para que não haja excesso de prazo na tramitação.',
+            "O tempo é variável e depende do rito processual (comum, júri, especial) e da agilidade do Judiciário. Durante a análise do caso, apresentamos um panorama das etapas prováveis e trabalhamos para que não haja excesso de prazo na tramitação.",
         },
         question3: {
-          question: 'Quais documentos são essenciais para a defesa?',
+          question: "Quais documentos são essenciais para a defesa?",
           answer:
-            'É fundamental apresentar o Boletim de Ocorrência, cópia do Inquérito Policial (se houver), documentos pessoais e qualquer prova que ajude a desconstruir a acusação (fotos, mensagens, lista de testemunhas). Caso você não tenha o processo, nós realizamos a busca nos sistemas judiciais.',
+            "É fundamental apresentar o Boletim de Ocorrência, cópia do Inquérito Policial (se houver), documentos pessoais e qualquer prova que ajude a desconstruir a acusação (fotos, mensagens, lista de testemunhas). Caso você não tenha o processo, nós realizamos a busca nos sistemas judiciais.",
         },
         question4: {
           question:
-            'O escritório atua com consultoria preventiva (Criminal Compliance)?',
+            "O escritório atua com consultoria preventiva (Criminal Compliance)?",
           answer:
-            'Sim. Atuamos de forma consultiva para empresas e indivíduos, visando mitigar riscos de investigações, garantir a conformidade com a lei e evitar que condutas do dia a dia sejam interpretadas como ilícitos penais.',
+            "Sim. Atuamos de forma consultiva para empresas e indivíduos, visando mitigar riscos de investigações, garantir a conformidade com a lei e evitar que condutas do dia a dia sejam interpretadas como ilícitos penais.",
         },
       },
-      paragraph: 'Clique aqui caso tenha mais dúvidas',
+      paragraph: "Clique aqui caso tenha mais dúvidas",
     },
     // team: {
     //   miniTag: 'A_Definir',
@@ -871,13 +871,13 @@ const content = {
     // },
     footer: {
       copyrightLine: ` ${currentYear} - ${infos.name} - Todos os direitos reservados`,
-      footerDivulgacaoText: 'Gostaria de ter um site como este? Clique aqui',
-      midSectionName: 'Até mais',
+      footerDivulgacaoText: "Gostaria de ter um site como este? Clique aqui",
+      midSectionName: "Até mais",
       footerText:
-        'Agradecemos sua visita! Esperamos que em breve você se torne nosso cliente e desfrute de todos os benefícios que oferecemos.',
-      footerSocialText: 'Siga a gente nas redes sociais:',
-      footerNavegacaoText: 'NAVEGAÇÃO',
-      desenvolvidoPor: 'Desenvolvido com excelência por Paper Street',
+        "Agradecemos sua visita! Esperamos que em breve você se torne nosso cliente e desfrute de todos os benefícios que oferecemos.",
+      footerSocialText: "Siga a gente nas redes sociais:",
+      footerNavegacaoText: "NAVEGAÇÃO",
+      desenvolvidoPor: "Desenvolvido com excelência por Paper Street",
       privacidade: (
         <div class="phone3:max-w-3xl mx-auto tablet1:px-6 text-gray-900 leading-relaxed font-secondFont">
           <h1 class="text-3xl font-bold mb-6">Política de Privacidade</h1>
@@ -903,7 +903,7 @@ const content = {
 
           <ul class="list-disc ml-6 mb-6 space-y-2">
             <li>
-              <strong>Autoridade Nacional de Proteção de Dados (ANPD):</strong>{' '}
+              <strong>Autoridade Nacional de Proteção de Dados (ANPD):</strong>{" "}
               órgão responsável pela fiscalização e aplicação da LGPD.
             </li>
 
@@ -1110,9 +1110,9 @@ const content = {
         </div>
       ),
       pontos: {
-        ponto1: 'Profissionalismo',
-        ponto2: 'Experiência',
-        ponto3: 'Resultados',
+        ponto1: "Profissionalismo",
+        ponto2: "Experiência",
+        ponto3: "Resultados",
       },
     },
     // socios: {
@@ -1184,8 +1184,8 @@ const content = {
       year: currentYear,
       footerexpediente: infos.expediente,
       obsFooter: infos.obs,
-      footerNavegacaoText: 'NAVEGAÇÃO',
-      footerDivulgacaoText: 'Gostaria de ter um site como este? Clique aqui',
+      footerNavegacaoText: "NAVEGAÇÃO",
+      footerDivulgacaoText: "Gostaria de ter um site como este? Clique aqui",
     },
     svgs: {
       wpp: (
@@ -1201,11 +1201,11 @@ const content = {
       ),
     },
   },
-}
+};
 
 export const abstractions = {
   titleModal: <strong>{content.texts.about.title}</strong>,
   subtitleModal: <strong>{content.texts.about.subtitle}</strong>,
-}
+};
 
-export default content
+export default content;

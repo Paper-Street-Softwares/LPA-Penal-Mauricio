@@ -1,45 +1,103 @@
 import React from "react";
 import imgIcon from "../../assets/imgs/icons/exclamation.webp";
+import MotionDivDownToUp from "../animation/MotionDivDownToUp";
 
-function CardsImportants({ title, paragraph, colorMode }) {
-  //precisa fazer colorMode
-  let bgCircle, bgCircleHover;
+function CardsImportants({
+  title,
+  paragraph,
+  colorMode,
+  className,
+  iconColor,
+}) {
+  let backgroundMode,
+    text,
+    textOpacity,
+    cardBg,
+    iconBg,
+    image,
+    bgObservation,
+    textDestaque,
+    textObservation;
+
   switch (colorMode) {
     case "light":
-      bgCircle = "text-corTitulosPreto";
-      bgCircleHover =
-        "group-hover:bg-white group-hover:border-2 group-hover:border-black";
-
+      backgroundMode = "bg-transparent";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      textDestaque = "text-primaryDark";
+      cardBg = "bg-quartenary";
+      iconBg = "bg-white text-primaryDark";
+      image = " border-[8px] border-white";
+      bgObservation = "bg-primaryDark";
+      textObservation = "text-white";
       break;
     case "dark":
-      bgCircle = "text-corTitulosPreto";
-      bgCircleHover =
-        "group-hover:bg-white group-hover:border-2 group-hover:border-black";
-      break;
-    default:
-      bgCircle = "text-corTitulosPreto";
-      bgCircleHover =
-        "group-hover:bg-white group-hover:border-2 group-hover:border-black";
-  }
-  return (
-    <div className="relative h-full bg-white shadow-lg max-w-[400px] py-12 px-10 rounded-[18px] flex flex-col gap-4 font-secondFont group hover:bg-black hover:text-white transition-all duration-700">
-      <h1 className="font-bold text-start text-corTitulosPreto group-hover:text-white">
-        {title}
-      </h1>
-      <p className="text-center desktop1:text-start text-corOutrosTextosPreto group-hover:text-white/80">
-        {paragraph}
-      </p>
+      backgroundMode = "bg-transparent";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      textDestaque = "text-primaryDark";
+      cardBg = "bg-dark";
+      iconBg = "bg-darkOpacity text-primaryLight";
+      image = " border-[8px] border-borderImage";
+      bgObservation = "bg-primaryLight";
+      textObservation = "text-black";
 
-      <div className="absolute p-3 transition-all duration-700 border-2 border-white rounded-full bg-primaryLight group-hover:bg-white group-hover:border-2 group-hover:border-black -top-6 left-6">
-        <img
-          src={imgIcon}
-          width={32}
-          height={32}
-          alt="Ícone de exclamação"
-          className="w-8 transition-all duration-700 invert"
-        />
+      break;
+    case "defaultDark":
+      backgroundMode = "bg-transparent";
+      text = "text-corTitulosPreto";
+      textOpacity = "text-corOutrosTextosPreto";
+      textDestaque = "text-primaryDark";
+      cardBg = "bg-quartenary";
+      iconBg = "bg-white text-primaryDark";
+      image = " border-[8px] border-white";
+      bgObservation = "bg-primaryDark";
+      textObservation = "text-white";
+      break;
+
+    case "defaultLight":
+      backgroundMode = "bg-transparent";
+      text = "text-corTitulosBranca";
+      textOpacity = "text-corOutrosTextosBranca";
+      textDestaque = "text-white";
+      cardBg = "bg-[color-mix(in_srgb,var(--primaryDark),black_30%)]";
+      iconBg = "bg-white text-primaryLight";
+      image =
+        " border-[8px] border-[color-mix(in_srgb,var(--primaryDark),black_30%)]";
+      bgObservation = "bg-[color-mix(in_srgb,var(--primaryDark),black_30%)]";
+      textObservation = "text-white";
+  }
+
+  const finalIconColor =
+    iconColor ??
+    (colorMode === "dark" || colorMode === "defaultDark"
+      ? "text-primaryLight"
+      : "#fff");
+
+  return (
+    <MotionDivDownToUp>
+      <div className="grid">
+        <div
+          className={`group p-6 rounded-xl ${cardBg} hover:scale-105 transition-all duration-700 max-w-[500px]`}
+        >
+          <div
+            className={`w-10 h-10 rounded-full ${iconBg} mb-4 flex items-center justify-center shadow-sm transition-transform`}
+          >
+            <h1 className="font-bold text-3xl">!</h1>
+          </div>
+          <h1
+            className={`font-secondFont font-bold text-lg mb-2 ${text} transition-all`}
+          >
+            {title}
+          </h1>
+          <p
+            className={`text-sm font-secondFont font-light ${textOpacity} transition-all`}
+          >
+            {paragraph}
+          </p>
+        </div>
       </div>
-    </div>
+    </MotionDivDownToUp>
   );
 }
 
