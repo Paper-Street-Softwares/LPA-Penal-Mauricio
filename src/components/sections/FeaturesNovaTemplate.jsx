@@ -41,8 +41,8 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
       cardBg = "bg-quartenary";
       iconBg = "bg-white text-primaryDark";
       image = " border-[8px] border-white";
-      hoverCardBg = "hover:bg-primaryDark hover:text-white";
-      hoverTextCard = " group-hover:text-white";
+      hoverCardBg = "hover:scale-105 transition-all duration-700";
+      hoverTextCard = " ";
       bgObservation = "bg-primaryDark";
       textObservation = "text-white";
       break;
@@ -55,8 +55,8 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
       cardBg = "bg-dark";
       iconBg = "bg-darkOpacity text-primaryLight";
       image = " border-[8px] border-borderImage";
-      hoverCardBg = "hover:bg-primaryLight hover:text-black";
-      hoverTextCard = " group-hover:text-black";
+      hoverCardBg = "hover:scale-105 transition-all duration-700";
+      hoverTextCard = " ";
       bgObservation = "bg-primaryLight";
       textObservation = "text-black";
 
@@ -70,8 +70,8 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
       cardBg = "bg-quartenary";
       iconBg = "bg-white text-primaryDark";
       image = " border-[8px] border-white";
-      hoverCardBg = "hover:bg-primaryDark hover:text-white";
-      hoverTextCard = " group-hover:text-white";
+      hoverCardBg = "hover:scale-105 transition-all duration-700";
+      hoverTextCard = " ";
       bgObservation = "bg-primaryDark";
       textObservation = "text-white";
   }
