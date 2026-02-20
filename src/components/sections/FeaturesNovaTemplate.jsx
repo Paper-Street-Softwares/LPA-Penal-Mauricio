@@ -218,7 +218,7 @@ function FeaturesNovaTemplate({ colorMode, frasesDestaque, accordion }) {
                           {feature.icon}
                         </div>
                         <h1
-                          className={`font-secondFont font-bold text-lg mb-2 ${text} ${hoverTextCard} transition-all`}
+                          className={`font-secondFont font-bold text-lg desktop1:text-sm desktop2:text-lg mb-2 ${text} ${hoverTextCard} transition-all`}
                         >
                           {feature.title}
                         </h1>
